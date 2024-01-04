@@ -7,7 +7,7 @@ Promise.all([
   faceapi.nets.faceExpressionNet.loadFromUri('/models')
 ]).then(startVideo)
 
-function startVideo() {
+const startVideo = () => {
   navigator.getUserMedia(
     { video: {} },
     stream => video.srcObject = stream,
